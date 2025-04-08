@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIREBUN - Coming Soon</title>
+    <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="assets/img/favicon.png"
+  />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #ffffff;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .logo {
+            padding: 2rem;
+            z-index: 10;
+        }
+        
+        .logo h2 {
+            color: #e40532;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            z-index: 5;
+        }
+        
+        /* Full height image with overlay */
+        .hero-image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(18, 18, 18, 0.95) 0%,
+                rgba(18, 18, 18, 0.85) 50%,
+                rgba(18, 18, 18, 0.6) 100%
+            );
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            z-index: 3;
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        h1 .light {
+            color: #e40532;
+            font-weight: 300;
+        }
+        
+        h1 .bold {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #aaaaaa;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .email-form {
+            position: relative;
+            margin-bottom: 2rem;
+            max-width: 450px;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid #444444;
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            outline: none;
+            color: #ffffff;
+        }
+        
+        .email-input::placeholder {
+            color: #888888;
+        }
+        
+        .submit-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 80px;
+            border: none;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, #e40532, #ee8c8c);
+            color: #121212;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #fccbcb, #f09d9d);
+            box-shadow: 0 5px 15px rgba(238, 140, 140, 0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .content-wrapper {
+                flex-direction: row;
+            }
+            
+            .content {
+                padding: 4rem;
+                width: 60%;
+            }
+            
+            .hero-image-container {
+                width: 50%;
+                right: 0;
+                left: auto;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                flex-direction: row;
+            }
+            
+            .logo {
+                position: absolute;
+                top: 2rem;
+                left: 4rem;
+                z-index: 10;
+            }
+            
+            .content {
+                padding-left: 4rem;
+                padding-top: 8rem;
+            }
+            
+            .hero-image-container {
+                width: 50%;
+            }
+            
+            .overlay {
+                background: linear-gradient(
+                    90deg,
+                    rgba(18, 18, 18, 1) 0%,
+                    rgba(18, 18, 18, 0.9) 30%,
+                    rgba(18, 18, 18, 0.589) 60%,
+                    rgba(18, 18, 18, 0.5) 100%
+                );
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h2>FIREBUN</h2>
+        </div>
+        
+        <div class="hero-image-container">
+            <img src="assets/img/bg.jpg" alt="Firebun Model" class="hero-image">
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="content">
+                <h1>
+                    <span class="light">WE'RE</span><br>
+                    <span class="bold">COMING</span><br>
+                    <span class="bold">SOON</span>
+                </h1>
+                
+                <p>
+                    Hello fellow shoppers! We're currently building our new 
+                    fashion store. Add your email below to stay up-to-date with 
+                    announcements and our launch deals.
+                </p>
+                
+                <!-- <form class="email-form">
+                    <input type="email" class="email-input" placeholder="Email Address" required>
+                    <button type="submit" class="submit-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20">
+                            <path fill="none" stroke="#121212" stroke-width="2" d="M1 1l8 8-8 8"/>
+                        </svg>
+                    </button>
+                </form> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
